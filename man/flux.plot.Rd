@@ -87,13 +87,14 @@ the following: "star", "round", "value".}
 \ifelse{html}{\out{C<sub>i</sub>}}{\eqn{mol C[i]}{ASCII}} values.
 By default, they are displayed on the left side of the plot.}
 
-\item{conversion.factor}{numerical value; factor to multiply flux values by 
-for unit conversion. Default is 1 (no conversion). 
-For example, use 3600 to convert from per-second to 
-per-hour. When using a conversion factor other than 1, 
-you should also specify \code{flux.unit} and 
-\code{flux.term.unit} to match the converted units, 
-so that both the flux and flux term labels are correct in the plots.}
+\item{conversion.factor}{numerical value; factor to multiply flux values by
+for unit conversion. Default is 1 (no conversion).
+For example, use 3600 to convert from per-second to
+per-hour. When using a conversion factor other than 1,
+you should also specify \code{flux.unit} and
+\code{flux.term.unit} to match the converted units,
+so that both the flux and flux term labels are correct
+in the plots.}
 }
 \value{
 A list of plots, one per \code{UniqueID}, drawn from flux results (output
@@ -138,7 +139,7 @@ chamber closure and opening that have been removed (\code{crop}) (indicated
 in light red). For manual chamber measurements, because there is no automatic
 chamber closure and opening, no green stars can be displayed. In addition,
 \code{crop} is only relevant if data points have been removed with the
-function \code{crop.meas()} (this function is not available yet).
+function \code{crop.meas()}.
 One may choose to display none of these parameters with \code{plot.display = NULL}.
 The order in which \code{prec}, \code{flux.term}, \code{MDF} and \code{nb.obs}
 are put in \code{plot.display = c()} decides the order in which they are
