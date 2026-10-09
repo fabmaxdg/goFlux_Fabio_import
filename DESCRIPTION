@@ -1,8 +1,9 @@
 Package: goFlux
 Type: Package
 Title: User-Friendly Chamber Data Processing, Flux Estimation, and Diagnostics
-Version: 0.2.1
+Version: 0.5.0
 Authors@R: c(person("Karelle", "Rheault", email = "karh@ign.ku.dk", role = c("cre", "aut", "dtc")),
+			 person("Camille", "Minaudo", email = "camille.minaudo@ub.edu", role = c("aut")),
              person("Klaus", "Steenberg Larsen", email = "ksl@ign.ku.dk", role = c("aut", "ths")))
 Maintainer: Karelle Rheault <karh@ign.ku.dk>
 Description: Import raw chamber data into R for flux calculation, quality check 
@@ -10,13 +11,12 @@ Description: Import raw chamber data into R for flux calculation, quality check
     flux estimates with an automatic selection of the best flux estimate - 
     without extensive knowledge or experience. More details are found in 
     Rheault et al., (2024) <doi:10.21105/joss.06393>.
-URL: https://qepanna.quarto.pub/goflux/
+URL: https://qepanna.github.io/goFlux/
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
 Depends: 
     R (>= 3.5.0)
-RoxygenNote: 7.3.3
 Collate: 
     'goFlux-package.R'
     'HM.flux.R'
@@ -27,17 +27,25 @@ Collate:
     'best.flux.R'
     'click.peak2.R'
     'crop.meas.R'
+    'find.bubbles.R'
     'flux.plot.R'
+    'flux.plot.aqua.R'
     'flux.term.R'
     'flux2pdf.R'
     'g.factor.R'
+    'goAquaFlux.total.R'
+    'goAquaFlux.diffusive.R'
+    'goAquaFlux.ebullition.R'
     'k.max.R'
     'goFlux.R'
+    'goAquaFlux.R'
+    'goAquaFlux.diagnostics.R'
     'imp.G2508-data.R'
     'imp.LI6400-data.R'
     'imp.LI7820-data.R'
     'imp.LI8200-data.R'
     'imp.UGGA-data.R'
+    'import.CR1000X.R'
     'import.DX4015.R'
     'import.EGM5.R'
     'import.G2201i.R'
@@ -66,4 +74,5 @@ Collate:
     'manID.G2201i-data.R'
     'manID.UGGA-data.R'
     'obs.win.R'
-Imports: AICcmodavg, data.table, dplyr, ggnewscale, ggplot2, ggstar, graphics, grDevices, grid, gridExtra, jsonlite, lifecycle, lubridate, minpack.lm, msm, pbapply, plyr, purrr, rjson, rlang, rlist, SimDesign, stats, stringr, tibble, tidyr, toOrdinal, utils
+Imports: AICcmodavg, data.table, dplyr, ggnewscale, ggplot2, ggstar, graphics, grDevices, grid, gridExtra, jsonlite, lifecycle, lubridate, minpack.lm, msm, pbapply, plyr, purrr, rjson, rlang, rlist, SimDesign, stats, stringr, tibble, tidyr, toOrdinal, utils, zoo
+Config/roxygen2/version: 8.1.0
